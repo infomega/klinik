@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
                 ('exp_date', models.DateTimeField(blank=True, null=True, verbose_name='Exp Date')),
                 ('apotik', models.CharField(blank=True, max_length=200, null=True, verbose_name='Apotik')),
                 ('last_update', models.DateField(auto_now=True)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now)),
                 ('id_golongan_obat', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='master.golongan_obat', verbose_name='Golongan')),
             ],
             options={
